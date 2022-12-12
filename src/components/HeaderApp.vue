@@ -91,6 +91,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: #fff;
 
   .container {
     @include mixIn.my-display-flex;
