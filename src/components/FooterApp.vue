@@ -1,8 +1,10 @@
 <script>
 import ShopBar from './ShopBarFooter.vue';
+import Menu from './MenuFooter.vue';
 export default {
     components: {
         ShopBar,
+        Menu,
     }
 }
 </script>
@@ -10,6 +12,7 @@ export default {
 <template>
     <footer>
         <ShopBar />
+        <Menu />
     </footer>
 </template>
 
