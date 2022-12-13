@@ -63,7 +63,7 @@ section {
 
     .container {
         @include mixIn.center(vertical);
-        justify-content: space-between;
+        justify-content: space-around;
         height: 100%;
 
         div {
