@@ -62,7 +62,6 @@ section {
     color: #fff;
 
     .container {
-        @include mixIn.my-display-flex;
         @include mixIn.center(vertical);
         justify-content: space-between;
         height: 100%;

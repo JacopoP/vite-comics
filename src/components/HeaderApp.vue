@@ -94,7 +94,6 @@ header {
   background-color: #fff;
 
   .container {
-    @include mixIn.my-display-flex;
     @include mixIn.center(vertical);
     height: 115px;
     justify-content: space-between;
