@@ -38,7 +38,7 @@ export default {
                 <div v-for="list in lists">
                     <h3>{{ list.title }}</h3>
                     <ul>
-                        <li v-for="link in list.links"><a href="#">{{ link }}</a></li>
+                        <li v-for="(link, index) in list.links" :key="index"><a href="#">{{ link }}</a></li>
                     </ul>
                 </div>
             </div>
