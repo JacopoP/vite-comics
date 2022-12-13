@@ -117,8 +117,6 @@ header {
           display: block;
           height: 100%;
           @include mixIn.center(vertical);
-          text-decoration: none;
-          color: #000;
         }
 
         &.active,
