@@ -83,18 +83,19 @@ export default {
   </header>
 </template>
 
-<style lang="scss" scoped>
-@use "./../style/partials/mixIn.scss";
-@use "./../style/partials/variables.scss";
+<style lang="scss">
+@use './../style/partials/variables.scss' as *;
+@use './../style/partials/mixIn.scss' as *;
 
 header {
   position: fixed;
+  z-index: 100;
   top: 0;
   width: 100%;
   background-color: #fff;
 
   .container {
-    @include mixIn.center(vertical);
+    @include center(vertical);
     height: 115px;
     justify-content: space-between;
 
@@ -103,7 +104,7 @@ header {
     }
 
     ul {
-      @include mixIn.my-display-flex;
+      @include my-display-flex;
       column-gap: 25px;
       height: 100%;
 
@@ -114,13 +115,13 @@ header {
         a {
           display: block;
           height: 100%;
-          @include mixIn.center(vertical);
+          @include center(vertical);
         }
 
         &.active,
         &:hover {
           a {
-            color: variables.$blue-DC;
+            color: $blue-DC;
           }
 
           &::after {
@@ -128,7 +129,7 @@ header {
             content: "";
             width: 100%;
             height: 4px;
-            background-color: variables.$blue-DC;
+            background-color: $blue-DC;
             position: absolute;
             bottom: 0;
           }

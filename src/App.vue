@@ -18,7 +18,5 @@ export default {
 </template>
 
 <style lang="scss">
-@use './style/partials/mixIn.scss';
-@use './style/partials/variables.scss';
-@use "./style/myStyle";
+@use "./style/myStyle" as *;
 </style>
