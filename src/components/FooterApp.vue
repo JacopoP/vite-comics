@@ -1,10 +1,12 @@
 <script>
 import ShopBar from './ShopBarFooter.vue';
 import Menu from './MenuFooter.vue';
+import Socials from './SocialFooter.vue';
 export default {
     components: {
         ShopBar,
         Menu,
+        Socials
     }
 }
 </script>
@@ -13,6 +15,7 @@ export default {
     <footer>
         <ShopBar />
         <Menu />
+        <Socials />
     </footer>
 </template>
 
