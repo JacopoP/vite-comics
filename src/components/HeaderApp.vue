@@ -109,7 +109,6 @@ header {
       height: 100%;
 
       li {
-        list-style: none;
         height: 100%;
         position: relative;
 
