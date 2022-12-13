@@ -1,4 +1,5 @@
 <script>
+import Card from './comicsCard.vue';
 export default {
     data() {
         return {
@@ -83,6 +84,9 @@ export default {
         getImagePath: function (imgUrl) {
             return new URL(imgUrl, import.meta.url).href;
         }
+    },
+    components: {
+        Card,
     }
 }
 </script>
@@ -94,13 +98,20 @@ export default {
             <a href="#">CURRENT SERIES</a>
         </div>
         <div class="container">
-
+            <Card v-for="(comic, index) in comicsArr" :key="index" :comic="comic" />
         </div>
+        <a id="load-more" href="#">LOAD MORE</a>
     </main>
 </template>
 
 <style lang="scss" scoped>
 @use "./../style/partials/variables.scss" as *;
+
+a {
+    display: block;
+    background-color: $blue-DC;
+    color: #fff;
+}
 
 #current-series {
     position: relative;
@@ -114,10 +125,7 @@ export default {
     }
 
     a {
-        display: block;
         position: absolute;
-        background-color: $blue-DC;
-        color: #fff;
         font-size: 1.5rem;
         padding: 10px 20px;
         bottom: -15px;
@@ -128,5 +136,17 @@ export default {
 
 .container {
     flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 0 45px;
+    row-gap: 45px;
+
+}
+
+#load-more {
+    font-size: .8rem;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0 auto 17px;
+    width: 177px;
 }
 </style>
